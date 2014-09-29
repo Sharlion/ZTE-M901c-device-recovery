@@ -1,0 +1,12 @@
+# device            mount point	        fstype		     [device2]      [length=]
+/emmc@android     /system             ext4      ro,noatime                              wait
+/emmc@cache       /cache              ext4      noatime,nosuid,nodev,noauto_da_alloc    wait
+/emmc@usrdata     /data               ext4      noatime,nosuid,nodev,noauto_da_alloc    wait,encryptable=footer
+/dev/bootimg	  /boot               emmc	defaults				defaults
+/dev/recovery	  /recovery           emmc	defaults				defaults
+/dev/uboot	  /uboot              emmc	defaults				defaults
+/dev/block/mmcblk0p8	/intersd      vfat	defaults				defaults
+
+# vold
+/devices/platform/mtk-msdc.0/mmc_host	/storage/sdcard0	vfat	nosuid,nodev	wait,voldmanaged=sdcard0:8
+/devices/platform/mtk-msdc.1/mmc_host	/storage/sdcard1	vfat	nosuid,nodev	wait,voldmanaged=sdcard1:auto

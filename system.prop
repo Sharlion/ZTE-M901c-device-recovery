@@ -1,0 +1,6 @@
+﻿#
+# system.prop for P692N60
+#
+ro.adb.secure=0
+ro.product.customize=P692N60
+
